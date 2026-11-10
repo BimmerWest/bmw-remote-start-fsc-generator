@@ -1,4 +1,4 @@
-// Browser implementation of generate_fsc.py. No network calls or dependencies.
+// Browser FSC construction using only the bundled public parameters.
 const BODY_LENGTH = 60;
 const SIGNATURE_LENGTH = 128;
 const DIGEST_LENGTH = 16;

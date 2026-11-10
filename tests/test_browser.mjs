@@ -10,7 +10,7 @@ test('MD5 matches a standard test vector', () => {
   assert.equal(bytesToHex(md5(new TextEncoder().encode('abc'))), '900150983cd24fb0d6963f7d28e17f72');
 });
 
-test('browser output matches both Python FSC vectors', () => {
+test('browser output matches both known FSC vectors', () => {
   const expected = new Map([
     [0x017c, '24ae475aaf4a7abdf38297c29acc8b50a04b21e53f6641805fdc08e98420379b'],
     [0x0180, 'da9b523b7029a05b203d9fb8f83a0e15ef74072cda36f353be1b7380d9943f2f'],

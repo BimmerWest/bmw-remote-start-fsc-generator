@@ -1,4 +1,4 @@
 *.fsc
-__pycache__/
-.venv/
 dist/
+node_modules/
+.DS_Store
