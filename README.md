@@ -32,7 +32,7 @@ The tests compare two deterministic FSC hashes and check the weak and strict sig
 
 ## Browser version (Pages source branch)
 
-The `codex/github-pages` branch adds a dependency-free browser version in `docs/`. It uses the same public parameters and creates the FSC entirely in the browser; it does not collect computer identifiers or upload the VIN. Run it locally from the repository root with:
+The `web-version` branch adds a dependency-free browser version in `docs/`. It uses the same public parameters and creates the FSC entirely in the browser; it does not collect computer identifiers or upload the VIN. Run it locally from the repository root with:
 
 ```powershell
 python -m http.server 8000
