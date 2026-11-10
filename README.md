@@ -2,9 +2,9 @@
 
 This python script can generate BMW BDC3 compatible car's FSC codes for `017C` and `0180` on the DME, it's still a POC but it should work from offline analysis of the DME code.
 
-
-
 ## Use
+
+You can use the web version [here](https://bimmerwest.github.io/bmw-remote-start-fsc-generator/)
 
 Download and extract the internal ZIP, keeping `generate_fsc.py` and `mdg1_public_data.json` in the same folder. From that folder:
 
