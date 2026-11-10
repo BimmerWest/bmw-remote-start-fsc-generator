@@ -142,18 +142,14 @@ function forgeSignature(digest, modulus) {
   throw new Error('Could not construct a suffix-only signature');
 }
 
-export function generateFsc(vin7, appId, data, templateBytes = null) {
+export function generateFsc(vin7, appId, data) {
   const vin = vin7.trim().toUpperCase();
   if (!/^[A-Z0-9]{7}$/.test(vin)) throw new Error('Enter exactly seven VIN letters or digits');
   if (![0x017c, 0x0180].includes(appId)) throw new Error('Select App ID 017C or 0180');
   if (data.public_exponent !== 3) throw new Error('Unsupported public exponent');
 
-  const template = templateBytes ?? hexToBytes(data.built_in_template_hex);
-  if (template.length < FSC_LENGTH) throw new Error('Template is incomplete');
   const modulus = bytesToInteger(hexToBytes(data.public_modulus_little_endian_hex), true);
   const record = new Uint8Array(FSC_LENGTH);
-  record.set(template.slice(0, BODY_LENGTH));
-  record.set(template.slice(-SIGNATURE_LENGTH), BODY_LENGTH);
   record[2] = appId >> 8;
   record[3] = appId & 0xff;
   record.set(new TextEncoder().encode(vin), 26);
