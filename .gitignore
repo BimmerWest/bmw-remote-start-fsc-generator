@@ -1,0 +1,4 @@
+*.fsc
+__pycache__/
+.venv/
+dist/
