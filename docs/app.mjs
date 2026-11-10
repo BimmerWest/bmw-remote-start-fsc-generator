@@ -35,9 +35,7 @@ form.addEventListener('submit', async (event) => {
     const data = await loadPublicData();
     const vin = form.elements.vin7.value;
     const appId = parseInt(form.elements.appid.value, 16);
-    const templateFile = form.elements.template.files[0];
-    const template = templateFile ? new Uint8Array(await templateFile.arrayBuffer()) : null;
-    const result = generateFsc(vin, appId, data, template);
+    const result = generateFsc(vin, appId, data);
     const filename = `${result.vin}_${result.appId.toString(16).toUpperCase().padStart(4, '0')}.fsc`;
     downloadFsc(result.bytes, filename);
     status.className = 'status success';
