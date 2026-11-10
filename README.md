@@ -1,14 +1,8 @@
 # BimmerWest FSC Lab
 
-Internal browser tool for creating an MDG1 remote-start FSC record. This branch contains only the web implementation in `docs/` and its JavaScript tests. It has no runtime dependencies or build step.
+Browser tool for creating an MDG1 remote-start FSC record. This branch contains only the web implementation and its JavaScript tests. It has no runtime dependencies or build step.
 
 ## Use locally
-
-Serve the repository with a local static web server, then open `/docs/`. For example:
-
-```powershell
-npx http-server .
-```
 
 Enter the last seven VIN characters, select App ID `017C` (DME1) or `0180` (DME2), and download the generated `.fsc` file. You can optionally supply an existing FSC as the template. The VIN and template are processed in the browser; the page does not upload them or collect computer identifiers.
 
