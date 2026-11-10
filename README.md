@@ -1,4 +1,4 @@
-# Remote start FSC generator (internal)
+# Remote start FSC generator
 
 Offline Python 3.10+ reproduction of the supplied MDG1 FSC generator's core algorithm. The package uses extracted public parameters and a built-in 188-byte template. It does not use the supplied executable at runtime or need third-party Python packages.
 
