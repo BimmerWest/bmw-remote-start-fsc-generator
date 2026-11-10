@@ -29,3 +29,15 @@ python -m unittest discover -s tests -v
 ```
 
 The tests compare two deterministic FSC hashes and check the weak and strict signature predicates. Generated `.fsc` files are ignored by Git; treat them as vehicle-specific data and distribute this package only through your internal channel.
+
+## Browser version (Pages source branch)
+
+The `codex/github-pages` branch adds a dependency-free browser version in `docs/`. It uses the same public parameters and creates the FSC entirely in the browser; it does not collect computer identifiers or upload the VIN. Run it locally from the repository root with:
+
+```powershell
+python -m http.server 8000
+```
+
+Open `http://localhost:8000/docs/`. The page also accepts an optional template FSC file, matching the Python tool. The browser code is checked with `node --test tests/test_browser.mjs`; its known output hashes match the Python implementation.
+
+GitHub Pages is **not enabled**. BimmerWest is on GitHub Free, which does not offer private Pages publishing for this private organization repository. Publishing a Pages site publicly would conflict with the internal-use scope.
