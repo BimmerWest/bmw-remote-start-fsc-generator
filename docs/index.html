@@ -13,7 +13,6 @@
     <main class="shell">
       <header class="topbar">
         <div class="brand"><span class="brand-mark">BW</span><span>BimmerWest <span class="brand-light">/ FSC Lab</span></span></div>
-        <span class="badge">INTERNAL RESEARCH</span>
       </header>
 
       <div class="layout">
@@ -47,10 +46,6 @@
               <option value="0180">0180 · DME2</option>
             </select>
 
-            <label class="template-label" for="template">Template FSC <span class="optional">optional</span></label>
-            <input id="template" name="template" type="file" accept=".fsc,application/octet-stream">
-            <p class="field-help">If omitted, the recovered built-in template is used.</p>
-
             <button id="generate" type="submit">Generate and download <span aria-hidden="true">↗</span></button>
           </form>
           <p id="status" class="status" role="status" aria-live="polite">Ready. No file has been generated.</p>
@@ -61,10 +56,10 @@
         <div class="notice-icon" aria-hidden="true">i</div>
         <div>
           <h2 id="scope-title">Scope of this result</h2>
-          <p>The generated file passes the signature comparison traced in one selected MDG1 software version. That does not establish acceptance on another ECU, successful installation, or vehicle remote-start activation. Use only in an authorized research workflow.</p>
+          <p>The generated file passes the signature comparison traced in selected MDG1 software version. That does not establish acceptance on another ECU, successful installation, or vehicle remote-start activation. Use only in an authorized research workflow.</p>
         </div>
       </section>
-      <footer>Offline generation · No computer fingerprint · BimmerWest internal tool</footer>
+      <footer>Offline generation · No computer fingerprint · A BimmerWest tool</footer>
     </main>
   </body>
 </html>
